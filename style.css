@@ -1,0 +1,150 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    border: none;
+}
+:root {
+    --hover-color: rgb(92, 255, 97);
+    --main-color: rgb(200 230 201);
+    --text-color: #324561;
+    --dark: #202124;
+    --light-dark: #35363a;
+}
+html {
+    scroll-behavior: smooth;
+    font-family: 'Roboto', sans-serif;
+    color: var(--text-color);
+}
+.dark {
+    background-color: var(--dark);
+    color: white;
+}
+.container {
+    width: calc(100% - 50px);
+    min-height: 100vh;
+    margin: auto;
+}
+.to-do-app {
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: whitesmoke;
+    border-radius: 6px;
+    padding: 20px;
+}
+.to-do-app.dark {
+    background-color: var(--light-dark);
+}
+.to-do-app header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    justify-content: space-between;
+    position: relative;
+}
+.to-do-app header h1 {
+    flex: 1;
+    margin-left: 10px;
+}
+.to-do-app header h1 img {
+    margin-right: 10px;
+}
+.to-do-app header span::before{
+    content: "";
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    background-image: url(/assets/icons8-new-moon-48.png);
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    top: 10.5px;
+    right: 0;
+    cursor: pointer;
+}
+.to-do-app header span.dark::before{
+    background-image: url(/assets/icons8-sun.svg);
+}
+.to-do-app form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.input {
+    flex: 1;
+    background-color: white;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    padding: 10px;
+}
+.input.dark {
+    background-color: var(--dark);
+}
+.add_task{
+    background-color: var(--main-color);
+    color: #4db051;
+    padding: 5px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.add_task:hover {
+    background-color: #4db051;
+    color: var(--main-color);
+    transition: .5s;
+}
+.tasks {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 5px 0px 5px;
+}
+.task {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    cursor: pointer;
+}
+.task span:last-child {
+    color: #939393
+    ;
+    font-size: large;
+    margin-left: 10px;
+}
+.task span:last-child:hover {
+    color: #5f6368;
+}
+.task p {
+    margin-left: 35px;
+    overflow-wrap: anywhere;
+}
+.input:focus {
+    border: 2px solid var(--main-color);
+    padding: calc(10px - 2px);
+}
+.task::before {
+    content: "";
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    background-image: url(/assets/icons8-check.svg);
+    background-position: center;
+    background-size: cover;
+}
+.task.done p {
+    color: #939393;
+    text-decoration: line-through;
+}
+.task.done::before{
+    background-image: url(/assets/icons8-check\ \(1\).svg);
+}
+footer {
+    position: fixed;
+    width: calc(100% - 50px);
+    bottom: 10px;
+    text-align: center;
+    font-size: 12px;
+}
