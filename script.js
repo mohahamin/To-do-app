@@ -65,6 +65,7 @@ function darkMode() {
 // save data in local storage function
 function saveData() {
   localStorage.setItem("data", TasksContainer.innerHTML);
+    localStorage.setItem("data", generalContainer.innerHTML);
 }
 // get data from local storage function
 function getData() {
