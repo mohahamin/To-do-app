@@ -60,6 +60,7 @@ function darkMode() {
     InputBox.classList.add("dark");
     darkToggle.classList.add("dark");
   }
+  saveData();
 }
 // save data in local storage function
 function saveData() {
