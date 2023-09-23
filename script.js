@@ -70,6 +70,7 @@ function saveData() {
 // get data from local storage function
 function getData() {
   TasksContainer.innerHTML = localStorage.getItem("data");
+    generalContainer.innerHTML = localStorage.getItem("data");
 }
 // call getData() function to get data from local storage when refresh or re-open the browser
 getData();
