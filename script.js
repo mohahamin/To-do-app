@@ -60,18 +60,14 @@ function darkMode() {
     InputBox.classList.add("dark");
     darkToggle.classList.add("dark");
   }
-  saveData();
 }
 // save data in local storage function
 function saveData() {
-  generalContainer = "";
   localStorage.setItem("data", TasksContainer.innerHTML);
-    localStorage.setItem("data", generalContainer.innerHTML);
 }
 // get data from local storage function
 function getData() {
   TasksContainer.innerHTML = localStorage.getItem("data");
-    generalContainer.innerHTML = localStorage.getItem("data");
 }
 // call getData() function to get data from local storage when refresh or re-open the browser
 getData();
